@@ -1,0 +1,42 @@
+PATIENT FOOD AI — PORTABLE/CORRECTED WINDOWS VERSION
+
+WHAT WAS FIXED
+- The launcher no longer uses a hard-coded path such as C:\Users\SanjayGovindhan\...\Python314.
+- It automatically finds Python using the Windows Python launcher (py) or PATH (python).
+- It creates a virtual environment inside this project folder.
+- Required packages are listed in requirements.txt and installed automatically.
+- The project can therefore be copied to another Windows computer without changing the username/path in the batch file.
+
+FIRST-TIME SETUP
+1. Install Python 3.11 or newer on the other computer.
+2. During Python installation, enable: Add python.exe to PATH.
+3. Extract this ZIP to any normal folder.
+4. Double-click START_PROJECT.bat.
+5. On the first run, the script creates venv and installs Flask and pypdf.
+6. The browser opens at http://127.0.0.1:5000.
+
+IMPORTANT
+- The application itself is offline/local after installation.
+- Internet is needed the first time only to install Python packages, unless those packages are already available on the computer.
+- Do NOT copy your old venv folder from another computer. This ZIP intentionally does not include venv because virtual environments contain computer-specific paths.
+- You do not need to edit START_PROJECT.bat for a different Windows username.
+
+TEST THE PROJECT
+1. Click Upload Report.
+2. Use sample_reports/sample_01_diabetes.pdf, sample_02_hypertension.pdf, or sample_03_anaemia_cholesterol.pdf.
+3. After analysis, open View Analysis from the dashboard.
+4. Open Weekly Plan to see the different days; edit any meal and save.
+5. Open Notifications.
+6. Demo Mode: use the three Test buttons for immediate notifications.
+7. Normal Mode: set the three notification times in Notification Settings. Keep the Notifications page open for browser notifications.
+
+DATA STORAGE
+patient_food.db is created automatically in the project folder and uses SQLite locally.
+
+TROUBLESHOOTING
+If the window closes or an error appears, run START_PROJECT.bat again and read the message shown in the Command Prompt.
+
+If Python is not installed, install it from:
+https://www.python.org/downloads/windows/
+
+This is an academic demonstration prototype. Food recommendations are rule-based demo recommendations and are not medical diagnosis or treatment advice.
